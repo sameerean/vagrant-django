@@ -1,5 +1,7 @@
 # vagrant-django
-A simple Django Application - to be used for the IaC projects, for deployment automation. You may start the dev environment as a virtual machiine using vagrant and connect to it using Visual Studio Code Insiders via SSH and use it as local, if you do not want to pollute your host machine.
+A simple Django Application - to be used for the IaC projects, for deployment automation. 
+
+You may lanch the dev environment as a virtual machiine using vagrant and connect to it using Visual Studio Code Insiders via SSH and use it as local, if you do not want to pollute your host machine.
 
 
 ## Pre-requisites
