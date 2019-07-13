@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from vagrant_django.views import home, index
 
 from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    # path('vdjango/', include('vagrant_django.urls')),
+    path('home/', home.as_view()),
     path('admin/', admin.site.urls),
 ]
