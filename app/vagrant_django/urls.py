@@ -21,6 +21,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('polls/', include('polls.urls')),
+    path('vagrant-django/', include('vagrant-django.urls')),
 
 ]
