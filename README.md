@@ -6,13 +6,16 @@ A simple Django Application - to be used for the IaC projects, for deployment au
 In a command terminal, navigate to folder, vagrant:
 > vagrant up
 
-## ssh to the virtual machine
+## ssh into the virtual machine
 > vagrant ssh
 
 ## Clone this project (inside the virtual machine)
 
 > mkdir workspace
+
 > cd workspace
+
 > git clone https://github.com/sameerean/vagrant-django.git
+
 > cd vagrant-django
 
