@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure("2") do |config|
+
+	config.ssh.insert_key = false
+	config.vm.box_check_update = false
+
+	config.vm.define "vagrant-django-local" do |vdjango_config|
+    vdjango_config.vm.box = "centos/7"
+		vdjango_config.vm.hostname = "VagrantDjangoLocal"
+		vdjango_config.vm.network "private_network", ip: "192.168.50.91"
+		vdjango_config.vm.network "forwarded_port", guest: 80, host: 2100
+		vdjango_config.vm.network "forwarded_port", guest: 8000, host: 2000
+		vdjango_config.vm.network "forwarded_port", guest: 9001, host: 2001
+		vdjango_config.vm.provider "virtualbox" do |vdjango_local|
+      	vdjango_local.name = "vdjango_local"
+      	opts = ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      	vdjango_local.customize opts
+      	vdjango_local.memory = "1024"
+      end
+      vdjango_config.vm.provision :shell, path: "provision.sh"
+		end
+
+end
+
