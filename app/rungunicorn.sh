@@ -7,4 +7,4 @@ python3.6 manage.py migrate
 pip3.6 install gunicorn
 
 
-exec gunicorn --workers 3 --bind unix:vagrant-django-app.sock app.wsgi
+exec gunicorn --workers 3 --bind unix:vagrant-django-app.sock vagrant_django.wsgi
